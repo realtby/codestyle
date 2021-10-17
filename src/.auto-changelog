@@ -1,0 +1,13 @@
+{
+  "output": "CHANGELOG.md",
+  "template": "./node_modules/@realtby/codestyle/changelog-template.hbs",
+  "unreleased": false,
+  "commitLimit": false,
+  "sort-commits": "date",
+  "issueUrl": "https://jira.realt.by/browse/{id}",
+  "issuePattern": "REALT-\\d+",
+  ".": "https://regex101.com/r/HEBTvr/5",
+  "replaceText": {
+    "(^[^\n]+)(?:\n)?(?:[^!]+)?(!\\d+)?": "$1 $2"
+  }
+}
