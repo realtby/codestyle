@@ -12,7 +12,9 @@ lint:
 dist:
 	rm -rf dist
 	mkdir dist
-	cp package*.json dist
+
+	cp package.json dist
+	cp README.md dist
 	cp -r src/* dist
 
 .PHONY:
