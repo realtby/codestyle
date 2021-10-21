@@ -14,14 +14,7 @@ const baseTypes = {
   release: ['📦', 'release'],
 };
 
-const baseScopes = [
-  'core',
-  'types',
-  'user',
-  'auth',
-  'utils',
-  '*',
-];
+const baseScopes = ['core', 'types', 'user', 'auth', 'utils', '*'];
 
 module.exports = ({ scopes = [], types = {} } = {}) => {
   const resultTypes = Object.assign(baseTypes, types);

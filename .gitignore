@@ -17,3 +17,6 @@ yarn-error.log*
 
 # lint
 .eslintcache
+
+# build
+dist

@@ -1,5 +1,10 @@
 # codestyle
+
 realt.by frontend codestyle tools shared configs
+
+![npm](https://img.shields.io/npm/v/@realtby/codestyle)
+[![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
 ## [EditorConfig](https://editorconfig.org)
 
@@ -66,11 +71,9 @@ CHANGELOG.md
 
 ```json
 {
-  // ...
   "scripts": {
     "format": "prettier --write ."
   }
-  // ...
 }
 ```
 
@@ -127,11 +130,9 @@ module.exports = {
 
 ```json
 {
-  // ...
   "scripts": {
     "lint": "eslint . --ext .ts,.tsx,.js,.jsx,.json --fix --cache --max-warnings=0"
   }
-  // ...
 }
 ```
 
@@ -236,13 +237,11 @@ module.exports = require('@realtby/.release-it');
 
 ```json
 {
-  // ...
   "scripts": {
     "commit": "git-cz",
     "changelog": "auto-changelog -p && git add CHANGELOG.md",
     "release": "release-it"
   }
-  // ...
 }
 ```
 

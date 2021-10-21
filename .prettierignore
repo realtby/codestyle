@@ -1,0 +1,24 @@
+# ide
+.idea/
+.vscode/
+
+# npm
+node_modules/
+package.json
+package-lock.json
+yarn.lock
+
+# misc
+coverage
+tsconfig.json
+
+# next
+.next
+public
+
+# builded
+dist
+
+# changelog
+*.hbs
+CHANGELOG.md
