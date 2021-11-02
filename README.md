@@ -198,15 +198,11 @@ module.exports = getChangelogConfig({
 3. add `commitlint.config.js` and insert following:
 
 ```js
+const getCommitlintConfig = require('@realtby/codestyle/commitlint.config');
+
 const czConfig = require('./changelog.config');
 
-module.exports = {
-  extends: ['@commitlint/config-conventional'],
-  rules: {
-    'type-enum': [2, 'always', czConfig.list],
-    'scope-enum': [2, 'always', czConfig.scopes],
-  },
-};
+module.exports = getCommitlintConfig(czConfig);
 ```
 
 4. add `.release-it.js`:
