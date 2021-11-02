@@ -1,4 +1,4 @@
-module.exports = ({ scopes = [], types = [] } = {}) => ({
+module.exports = ({ scopes = [], list: types = [] } = {}) => ({
   extends: ['@commitlint/config-conventional'],
   plugins: ['commitlint-plugin-function-rules'],
   rules: {
