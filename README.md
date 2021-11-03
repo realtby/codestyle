@@ -1,4 +1,4 @@
-# codestyle
+# [@realtby/codestyle](https://www.npmjs.com/package/@realtby/codestyle)
 
 realt.by frontend codestyle tools shared configs
 
