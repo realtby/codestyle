@@ -1,6 +1,6 @@
 {
   "name": "@realtby/codestyle",
-  "version": "0.1.8-2",
+  "version": "0.1.8",
   "description": "realt.by frontend codestyle tools shared configs",
   "main": ".release-it.js",
   "engines": {
