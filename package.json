@@ -1,6 +1,6 @@
 {
   "name": "@realtby/codestyle",
-  "version": "0.1.7",
+  "version": "0.1.8-0",
   "description": "realt.by frontend codestyle tools shared configs",
   "main": ".release-it.js",
   "engines": {
@@ -13,7 +13,8 @@
   "scripts": {
     "release": "release-it",
     "format": "prettier --write .",
-    "lint": "eslint . --ext .ts,.tsx,.js,.jsx,.json --fix --cache"
+    "lint": "eslint . --ext .ts,.tsx,.js,.jsx,.json --fix --cache",
+    "postinstall": "patch-package"
   },
   "dependencies": {
     "@commitlint/cli": "14.1.0",
@@ -61,5 +62,8 @@
   "homepage": "https://github.com/realtby/codestyle#readme",
   "bugs": {
     "url": "https://github.com/realtby/codestyle/issues"
+  },
+  "devDependencies": {
+    "patch-package": "^6.4.7"
   }
 }
