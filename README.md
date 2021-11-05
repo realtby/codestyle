@@ -15,7 +15,8 @@ npm i -D @realtby/codestyle
 ## Development
 
 ```bash
-make release
+make release # to push new version & generate changelog
+make prerelease # only push new version to npm, for testing
 ```
 
 ## [EditorConfig](https://editorconfig.org)
@@ -253,9 +254,9 @@ module.exports = require('@realtby/codestyle/release-it');
 }
 ```
 
-7. `npm i -D auto-changelog` + add patch from `lib/patches`
+7. `npm i -D auto-changelog` + add patch from [`codestyle/patches`](https://github.com/realtby/codestyle/tree/main/patches)
 
-8. add badges to `README.md` :)
+8. add badges to `README.md`
 
 ```md
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)

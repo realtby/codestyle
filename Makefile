@@ -24,3 +24,7 @@ build: dist
 .PHONY:
 release:
 	npm run release
+
+.PHONY:
+prerelease:
+	npm run pre-release

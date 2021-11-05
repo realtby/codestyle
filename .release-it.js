@@ -12,7 +12,6 @@ module.exports = {
   git: {
     changelog: 'auto-changelog --stdout --commit-limit false -u > /dev/null',
     commitMessage: 'release(*): ${version}',
-    requireCleanWorkingDir: false,
   },
   hooks: {
     'before:init': ['npm run lint', 'make dist'],
