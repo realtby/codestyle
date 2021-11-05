@@ -12,6 +12,12 @@ realt.by frontend codestyle tools shared configs
 npm i -D @realtby/codestyle
 ```
 
+## Development
+
+```bash
+make release
+```
+
 ## [EditorConfig](https://editorconfig.org)
 
 Create configuration file `.editorconfig` at the root of the project. Insert the following content:
