@@ -6,7 +6,7 @@ module.exports = {
   'only-version': true,
   plugins: {
     '@release-it/bumper': {
-      out: ['package.json', 'package-lock.json', 'dist/package.json'],
+      out: ['dist/package.json'],
     },
   },
   git: {
