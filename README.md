@@ -214,7 +214,7 @@ module.exports = getCommitlintConfig(czConfig);
 4. add `.release-it.js`:
 
 ```js
-module.exports = require('@realtby/.release-it');
+module.exports = require('@realtby/codestyle/release-it');
 ```
 
 5. add `.auto-changelog`:

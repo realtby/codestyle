@@ -17,6 +17,9 @@ dist:
 	cp README.md dist
 	cp -r src/* dist
 
+.PHONY: build
+build: dist
+
 .PHONY:
 release:
 	npm run release
