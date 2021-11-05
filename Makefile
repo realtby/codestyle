@@ -16,6 +16,7 @@ dist:
 	cp package.json dist
 	cp README.md dist
 	cp -r src/* dist
+	cp -r patches dist
 
 .PHONY: build
 build: dist

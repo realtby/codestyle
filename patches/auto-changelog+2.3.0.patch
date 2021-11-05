@@ -1,0 +1,21 @@
+diff --git a/node_modules/auto-changelog/src/commits.js b/node_modules/auto-changelog/src/commits.js
+index 20a86e4..ad829ec 100644
+--- a/node_modules/auto-changelog/src/commits.js
++++ b/node_modules/auto-changelog/src/commits.js
+@@ -42,6 +42,7 @@ const parseCommit = (commit, options = {}) => {
+   const [, hash, date, author, email, tail] = commit.match(MATCH_COMMIT)
+   const [body, stats] = tail.split(MESSAGE_SEPARATOR)
+   const message = encodeHTML(body)
++  const replacedMessage = replaceText(message.trim(), options)
+   const parsed = {
+     hash,
+     shorthash: hash.slice(0, 7),
+@@ -49,7 +50,7 @@ const parseCommit = (commit, options = {}) => {
+     email,
+     date: new Date(date).toISOString(),
+     subject: replaceText(getSubject(message), options),
+-    message: message.trim(),
++    message: replacedMessage,
+     fixes: getFixes(message, author, options),
+     href: options.getCommitLink(hash),
+     breaking: !!options.breakingPattern && new RegExp(options.breakingPattern).test(message),
