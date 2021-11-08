@@ -1,6 +1,6 @@
 {
   "name": "@realtby/codestyle",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "description": "realt.by frontend codestyle tools shared configs",
   "main": ".release-it.js",
   "engines": {
@@ -24,6 +24,7 @@
     "@typescript-eslint/eslint-plugin": "5.0.0",
     "@typescript-eslint/parser": "5.0.0",
     "auto-changelog": "2.3.0",
+    "babel-eslint": "10.1.0",
     "commitlint-plugin-function-rules": "1.4.0",
     "eslint": "7.32.0",
     "eslint-config-prettier": "8.3.0",
