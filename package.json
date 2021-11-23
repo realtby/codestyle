@@ -1,6 +1,6 @@
 {
   "name": "@realtby/codestyle",
-  "version": "0.1.9",
+  "version": "0.1.11",
   "description": "realt.by frontend codestyle tools shared configs",
   "main": ".release-it.js",
   "engines": {
@@ -11,6 +11,7 @@
     "access": "public"
   },
   "scripts": {
+    "postinstall": "bash bin/copy-husky.sh",
     "release": "release-it",
     "pre-release": "release-it --no-git",
     "format": "prettier --write .",
@@ -42,6 +43,7 @@
     "eslint-plugin-testing-library": "4.12.4",
     "eslint-plugin-unicorn": "37.0.1",
     "git-cz": "4.7.6",
+    "husky": "7.0.4",
     "lint-staged": "11.2.3",
     "prettier": "2.4.1",
     "prettier-eslint": "13.0.0",

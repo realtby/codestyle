@@ -275,17 +275,15 @@ module.exports = {
 };
 ```
 
-2. `npm install husky --save-dev`
+2. add `.husky` folder to `.gitignore`
 
-3. add `.huskyrc.js` and insert following: (TODO: update to lates husky version)
+3. run `husky install` in your project root
 
-```js
-module.exports = {
-  hooks: {
-    'pre-commit': 'lint-staged',
-    'pre-push': 'npm run type-check && npm test',
-    'prepare-commit-msg': 'exec < /dev/tty && git cz --hook || true',
-    'commit-msg': 'commitlint -E HUSKY_GIT_PARAMS',
-  },
-};
-```
+You can extend current husky hooks, by adding scripts in you package.json:
+   - "husky:commit-msg": "commitlint --edit $HUSKY_GIT_PARAMS"
+   - "husky:pre-commit": "lint-staged"
+   - "husky:pre-push": "npm run type-check"
+   - "husky:prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
+
+> Note: If node_modules are installed and you decide to delete the .husky folder
+> then you need to delete all node_modules and install them again.
