@@ -17,6 +17,8 @@ dist:
 	cp README.md dist
 	cp -r src/* dist
 	cp -r patches dist
+	cp -r .husky dist
+	cp -r bin dist
 
 .PHONY: build
 build: dist
