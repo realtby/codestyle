@@ -1,6 +1,6 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-commitlint --edit $HUSKY_GIT_PARAMS
+npx commitlint --edit $HUSKY_GIT_PARAMS
 
 npm run husky:commit-msg --if-present
