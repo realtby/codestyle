@@ -12,9 +12,11 @@
   },
   "scripts": {
     "postinstall": "bash bin/copy-husky.sh",
-    "release": "release-it",
-    "pre-release": "release-it --no-git",
+    "release": "HUSKY=0 release-it",
+    "pre-release": "HUSKY=0 release-it --no-git",
     "format": "prettier --write .",
+    "npmrc:local": "LOCAL=true bash bin/create-npmrc.sh",
+    "npmrc:public": "bash bin/create-npmrc.sh",
     "lint": "eslint . --ext .ts,.tsx,.js,.jsx,.json --fix --cache"
   },
   "dependencies": {
