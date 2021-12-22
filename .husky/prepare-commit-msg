@@ -1,6 +1,8 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-exec < /dev/tty && npx git-cz --hook || true
+if [[ $RELEASE_IT != "true" ]];then
+  exec < /dev/tty && npx git-cz --hook || true
+fi;
 
 npm run husky:prepare-commit-msg --if-present

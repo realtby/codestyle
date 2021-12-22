@@ -19,6 +19,30 @@ make release # to push new version & generate changelog
 make prerelease # only push new version to npm, for testing
 ```
 
+## How to test publish
+
+In order to locally test the current package with
+the project infrastructure, you can use
+npm proxy register [Verdaccio](https://verdaccio.org/)
+
+Locally, the easiest way to run it through Docker is to run
+the following command:
+```bash
+$ docker run -it --rm --name verdaccio -p 4873:4873 verdaccio/verdaccio
+```
+
+To check that everything is working,
+go to the web ui url in browser:
+http://localhost:4873
+
+In order to publish and pull the package from the Proxy repository,
+you need to add the following code to `.npmrc`
+```text
+registry=http://localhost:4873
+```
+Now you can safely pull and publish to the local npm register!
+
+
 ## [EditorConfig](https://editorconfig.org)
 
 Create configuration file `.editorconfig` at the root of the project. Insert the following content:
