@@ -1,7 +1,7 @@
 .PHONY:
 install:
 	npm ci --also=dev
-	husky install
+	npx husky install
 	npm run npmrc:public
 
 # prettier + eslint + tsc
