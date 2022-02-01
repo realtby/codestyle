@@ -27,6 +27,7 @@ npm proxy register [Verdaccio](https://verdaccio.org/)
 
 Locally, the easiest way to run it through Docker is to run
 the following command:
+
 ```bash
 $ docker run -it --rm --name verdaccio -p 4873:4873 verdaccio/verdaccio
 ```
@@ -37,11 +38,12 @@ http://localhost:4873
 
 In order to publish and pull the package from the Proxy repository,
 you need to add the following code to `.npmrc`
+
 ```text
 registry=http://localhost:4873
 ```
-Now you can safely pull and publish to the local npm register!
 
+Now you can safely pull and publish to the local npm register!
 
 ## [EditorConfig](https://editorconfig.org)
 
@@ -257,7 +259,7 @@ module.exports = require('@realtby/codestyle/release-it');
   "unreleased": false,
   "commitLimit": false,
   "sort-commits": "date",
-  "issueUrl": "https://jira.realt.by/browse/{id}",
+  "issueUrl": "https://realtby.atlassian.net/browse/{id}",
   "issuePattern": "REALT-\\d+",
   ".": "https://regex101.com/r/HEBTvr/5",
   "replaceText": {
@@ -304,10 +306,11 @@ module.exports = {
 3. run `husky install` in your project root
 
 You can extend current husky hooks, by adding scripts in you package.json:
-   - "husky:commit-msg": "commitlint --edit $HUSKY_GIT_PARAMS"
-   - "husky:pre-commit": "lint-staged"
-   - "husky:pre-push": "npm run type-check"
-   - "husky:prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
+
+- "husky:commit-msg": "commitlint --edit $HUSKY_GIT_PARAMS"
+- "husky:pre-commit": "lint-staged"
+- "husky:pre-push": "npm run type-check"
+- "husky:prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
 
 > Note: If node_modules are installed and you decide to delete the .husky folder
 > then you need to delete all node_modules and install them again.

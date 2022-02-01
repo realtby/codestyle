@@ -4,7 +4,7 @@
   "unreleased": false,
   "commitLimit": false,
   "sort-commits": "date",
-  "issueUrl": "https://jira.realt.by/browse/{id}",
+  "issueUrl": "https://realtby.atlassian.net/browse/{id}",
   "issuePattern": "REALT-\\d+",
   ".": "https://regex101.com/r/HEBTvr/5",
   "replaceText": {
