@@ -18,7 +18,7 @@ module.exports = {
     'import/first': 'error',
     'import/newline-after-import': ['error', { count: 1 }],
     'import/no-named-export': 'off',
-    // 'import/no-default-export': 'warn',
+    'import/no-default-export': 'warn',
     'import/no-self-import': 'error',
   },
 };
