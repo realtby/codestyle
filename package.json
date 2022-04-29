@@ -4,8 +4,8 @@
   "description": "realt.by frontend codestyle tools shared configs",
   "main": ".release-it.js",
   "engines": {
-    "node": "~14.17",
-    "npm": "~6.14"
+    "node": ">=14.17",
+    "npm": ">=6.14"
   },
   "publishConfig": {
     "access": "public"
