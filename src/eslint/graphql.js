@@ -1,4 +1,5 @@
 module.exports = {
+  //https://github.com/B2o5T/graphql-eslint/blob/master/packages/plugin/CHANGELOG.md
   overrides: [
     {
       files: ['*.gql'],
@@ -14,26 +15,25 @@ module.exports = {
         '@graphql-eslint/naming-convention': [
           'error',
           {
-            ObjectTypeDefinition: 'PascalCase',
-            InputObjectTypeDefinition: 'PascalCase',
+            types: 'PascalCase',
             FieldDefinition: 'camelCase',
-            // FIXME:
-            // EnumValueDefinition: 'camelCase',
-            OperationDefinition: 'camelCase',
+            OperationDefinition: {
+              style: 'camelCase',
+              forbiddenPrefixes: ['Query', 'Mutation', 'Subscription', 'Get'],
+              forbiddenSuffixes: ['Query', 'Mutation', 'Subscription'],
+            },
             FragmentDefinition: 'camelCase',
-            QueryDefinition: 'camelCase',
-            leadingUnderscore: 'allow',
+            'FieldDefinition[parent.name.value = Query]': 'camelCase',
+            allowLeadingUnderscore: true,
           },
         ],
         '@graphql-eslint/no-deprecated': ['error'],
         '@graphql-eslint/unique-fragment-name': ['error'],
         '@graphql-eslint/unique-operation-name': ['error'],
         '@graphql-eslint/no-anonymous-operations': ['error'],
-        '@graphql-eslint/no-operation-name-suffix': ['error'],
-        '@graphql-eslint/avoid-operation-name-prefix': ['error', { keywords: ['get'] }],
         '@graphql-eslint/require-deprecation-reason': ['error'],
         '@graphql-eslint/no-case-insensitive-enum-values-duplicates': ['error'],
-        '@graphql-eslint/avoid-duplicate-fields': ['error'],
+        '@graphql-eslint/no-duplicate-fields': ['error'],
         '@graphql-eslint/input-name': [
           'error',
           {
